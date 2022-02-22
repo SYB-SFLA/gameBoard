@@ -62,7 +62,7 @@ const app = {
                 break;
         }
 
-        // on vient de tourner ? ok on redessine tout
+        /* Redessinage du plateau */
         app.redrawBoard();
     },
     /* 2. Méthode qui permet de tourner à droite */
@@ -97,7 +97,7 @@ const app = {
                 break;
         }
 
-        // on vient de tourner ? ok on redessine tout
+        /* Redessinage du plateau */
         app.redrawBoard();
     },
     /* 3. Méthode qui permet d'avancer sur le plateau de jeu */
@@ -116,14 +116,14 @@ const app = {
             /* CAS où la direction du joueur est à droite */
             case 'right':
                 /* Faire attention à ne pas dépasser par la droite */
-                /* CONDITION - SI la position 'x' du joueur est inférieur à 5, soit la position de la case d'arrivée, alors on incrémente - le joueur n'a pas atteint la limite de la grille */
+                /* CONDITION - SI la position 'x' du joueur est inférieur à 5, soit la position de la case d'arrivée (sinon, on sort du plateau), alors on incrémente - le joueur n'a pas atteint la limite de la grille */
                 if (app.player.x < 5) {
                     app.player.x++;
                 }
                 break;
             /* CAS où la direction du joueur est en haut */
             case 'up':
-                // Faire attention à ne pas dépasser par le haut ?
+                /* Faire attention à ne pas dépasser par le haut */
                 /* CONDITION - SI la position 'y' du joueur est supérieur à 0, alors on décrémente - le joueur doit poursuivre le chemin par en bas, sinon il sort de la grille */
                 if (app.player.y > 0) {
                     app.player.y--;
@@ -147,7 +147,7 @@ const app = {
                 break;
         }
 
-        // on vient d'avancer ? ok on redessine tout
+        /* Redessinage du plateau */
         app.redrawBoard();
     },
     /* 4. Méthode qui permet de nettoyer le plateau de jeu */
@@ -155,7 +155,7 @@ const app = {
         /* La propriete innerHTMl permet de designer le contenu qui se trouve entre une balsie ouverte et fermante - Dans notre cas, on réaffecte 'RIEN' à l'élément 'boardElement' - Façon de cleaner l'élément ciblé  */ 
         app.boardElement.innerHTML = '';
     },
-    /* 5. Méthode qui peremt de dessiner le plateau de jeu */
+    /* 5. Méthode qui permet de dessiner le plateau de jeu */
     drawBoard: () => {
         /* Création de 4 divs avec la classe "row" */
         /* Puis dans chacune des divs, création de 6 autres divs ayant la classe 'cell' */

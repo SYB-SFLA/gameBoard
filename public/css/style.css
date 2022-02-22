@@ -5,7 +5,9 @@
 }
 
 body {
-  background: rgb(85, 81, 81) center / cover  url(../img/boardgames.jpg);
+  background-size: cover;
+  background-image: url(../img/boardgames.jpg) ;
+  /* background-repeat: no-repeat; */
   /* cover : indique au navigateur qu'il doit automatiquement et proportionnellement mettre à l'échelle la largeur et la hauteur de l'image d'arrière-plan afin qu'elles soient toujours égales ou supérieures à la largeur/hauteur de la fenêtre d'affichage */
 }
 
