@@ -1,0 +1,8 @@
+<!-- On inclut le header et le footer qui sont regroupés dans un dossier 'partials' -->
+<%- include('./partials/header.ejs') %>
+<main>
+    <h3><%=game.title%></h3>
+    <div id="board"></div>
+    <script src="/js/<%=game.jsFile%>" charset="utf-8"></script>
+</main>
+<%- include('./partials/footer.ejs') %>

@@ -1,0 +1,78 @@
+/** reset **/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(85, 81, 81) center / cover  url(../img/boardgames.jpg);
+  /* cover : indique au navigateur qu'il doit automatiquement et proportionnellement mettre à l'échelle la largeur et la hauteur de l'image d'arrière-plan afin qu'elles soient toujours égales ou supérieures à la largeur/hauteur de la fenêtre d'affichage */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* True Styling */
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin: 0;
+  font-family: fantasy;
+  font-size: 5rem;
+  padding: 10px;
+  text-align: center;
+  color: white!important;
+  background: rgba(109, 109, 109, 0.8);
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 10px rgba(0,0,0,0.5);
+  /* text-shadow: h-shadow (position horizontale) v-shadow (position verticale) blur-radius (le rayon flou) color ; */
+}
+
+header nav{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex-direction: column;
+}
+
+header nav ul {
+  background: rgba(109, 109, 109, 0.8);
+  color: rgba(255, 255, 255, 255);
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  height: 50px;
+}
+
+header nav ul li {
+  text-align:center;
+  padding: 15px;
+  transition: all ease .5s;
+  font-size: 1rem;
+}
+
+header nav ul li:hover {
+  font-size: 1.2rem;
+  color: red;
+  text-decoration: underline; 
+  font-weight: bold;
+  text-shadow: 0px 10px 4px rgba(0,0,0,0.5);
+}
+
+h3 {
+  text-align: center;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: black;
+  background-color: rgba(140, 140, 140, 0.8);
+}
+
+p {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 5rem;
+  background-color: rgba(140, 140, 140, 0.8);
+}

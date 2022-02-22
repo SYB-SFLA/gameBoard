@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GameHub</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Dans le cas où on est sur la page du diceRoller, on a besoin du fichier diceRoller.css. Dans les autres cas, on ne l'appelle pas. Il en va de même pour le cas de grunt, on appelle le fichier css correspondant. Pour le jeu de la fourchette, pas de fichier css propre au jeu -->
+    <% console.log(cssFile) %>
+        <% if(cssFile){ %>
+            <!-- Uniquement si on est dans le jeu DiceRoller et Zelda, récupère les fichiers CSS respectifs -->
+            <link rel="stylesheet" href="/css/<%=cssFile%>">
+        <% } %>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="/">GameBoard</a>
+        </h1>
+        <nav>
+            <ul>
+                <!-- Boucle sur les différents jeux enregistrés dans mes locals, affiche leur titre -->
+                <% for(const game of locals.games){ %>
+                    <li> <a href="/game/<%=game.name%>">
+                            <%=game.title%>
+                        </a>
+                    </li>
+                    <% } %>
+            </ul>
+        </nav>
+    </header>

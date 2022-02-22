@@ -8,5 +8,5 @@ Tu trouveras trois jeux, à toi de choisir entre:
 - **le jeu du lancé de dés** : le but de réussir à battre le lancé aléatoire de l'adversaire. Tu peux choisir plusieurs dés en cours de partie sans que le compteur soit remis à zéro,
 - **le jeu de Zelda** : le but est d'arriver sur la case d'arrivée en optimisant ses déplacements (compteur). 
 
-<img src="./gameBoard%20-%20Home.png">
+<img src="./public/img/gameBoard%20-%20Home.png">
 

@@ -1,0 +1,33 @@
+<!-- On inclut le header et le footer qui sont regroupés dans un dossier 'partials' -->
+<%- include('./partials/header.ejs') %>
+  <h3>Lancé de dés</h3>
+
+    <div id="welcome">
+        <button id="play" class="btn" type="button">Jouer</button>
+    </div>
+    <div id="app" class="hidden">
+        <div class="form">
+            <form id="game-form">
+                <!-- 
+                    le type 'range' permet à l'utilisateur d'indiquer une valeur numérique comprise entre 2 bornes. La valeur précise n'est pas considéré comme importante. Idéal pour le curseur
+                    la 'value' correspond à celle sur laquelle le curseur sera pointée au lancement de la page, donc par défaut
+                -->
+                <input 
+                    type="range"
+                    id="dice-number-input"
+                    value="3" 
+                    min="1"
+                    max="5"
+                >
+                <span id="dice-number">3</span>
+                <button class="btn">Valider le nombre de dés et lancer une partie !</button>
+            </form>
+        </div>
+        <div id="game">
+            <div class="board" id="player"></div>
+            <div class="board" id="dealer"></div>
+        </div>
+    </div>
+
+    <script src="/js/diceRoller.js"></script>
+<%- include('./partials/footer.ejs') %>
